@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tenho Algo Pra Te Perguntar 💖</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+    .card {
+      background: #fff;
+      max-width: 420px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #e63946;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .heart {
+      font-size: 40px;
+      animation: pulse 1.5s infinite;
+      margin-bottom: 15px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .yes {
+      background: #e63946;
+      color: #fff;
+    }
+    .no {
+      background: #ddd;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    #response {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #e63946;
+      display: none;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.youtube.com/watch?v=ZQk7Gm4mKZc" type="audio/mpeg">
+  </audio>
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h1>Oi, Gabriel 💙</h1>
+    <p>
+      Desde que você entrou na minha vida, tudo ficou mais leve, mais bonito e mais verdadeiro.
+      Cada conversa, cada sorriso e cada momento ao seu lado me fizeram ter certeza de uma coisa…
+      <br><br>
+      <strong>Ainda bem que você chegou.</strong>
+    </p>
+    <p><strong>Eu quero viver tudo isso com você.</strong></p>
+    <h2>Gabriel, você aceita namorar comigo?</h2>
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">SIM</button>
+      <button class="no" onclick="sayNo()">NÃO</button>
+    </div>
+    <div id="response"></div>
+  </div>
+
+  <script>
+    function sayYes() {
+      const response = document.getElementById('response');
+      response.style.display = 'block';
+      response.innerHTML = 'EU SABIA 😍💖 Prometo cuidar de você todos os dias!';
+    }
+    function sayNo() {
+      const response = document.getElementById('response');
+      response.style.display = 'block';
+      response.innerHTML = 'Não aceito essa resposta 😅❤️ Tenta de novo!';
+    }
+  </script>
+</body>
+</html>
+
+Successfully updated text document with textdoc_id '6940fae3a4108191bcf59a83629b271a'
